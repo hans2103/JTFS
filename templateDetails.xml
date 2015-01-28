@@ -5,7 +5,7 @@
     <author>Hans Kuijpers</author>
     <authorEmail>info@hkweb.nl</authorEmail>
     <authorUrl>http://www.hkweb.nl</authorUrl>
-    <copyright>HKweb 2014</copyright>
+    <copyright>HKweb 2015</copyright>
     <license>GNU/GPL</license>
     <version>1.0.0</version>
     <description>TPL_THISTEMPLATE_XML_DESCRIPTION</description>
@@ -22,6 +22,7 @@
         <folder>js</folder>
         <folder>language</folder>
         <folder>less</folder>
+        <folder>pagelayout</folder>
     </files>
 
     <languages folder="language">
@@ -50,7 +51,6 @@
     <config>
         <fields name="params">
             <fieldset name="basic">
-
                 <field name="pagelayout"
                     type="list"
                     default="1column"
