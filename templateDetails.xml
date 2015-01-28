@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.3" type="template">
+    <name>ThisTemplate</name>
+    <creationDate>2015-01-27</creationDate>
+    <author>Hans Kuijpers</author>
+    <authorEmail>info@hkweb.nl</authorEmail>
+    <authorUrl>http://www.hkweb.nl</authorUrl>
+    <copyright>HKweb 2014</copyright>
+    <license>GNU/GPL</license>
+    <version>1.0.0</version>
+    <description>TPL_THISTEMPLATE_XML_DESCRIPTION</description>
+
+    <files>
+        <filename>index.php</filename>
+        <filename>helper.php</filename>
+        <filename>helper.class.php</filename>
+        <filename>templateDetails.xml</filename>
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>fonts</folder>
+        <folder>html</folder>
+        <folder>js</folder>
+        <folder>language</folder>
+        <folder>less</folder>
+    </files>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.tpl_thistemplate.ini</language>
+        <language tag="en-GB">en-GB/en-GB.tpl_thistemplate.sys.ini</language>
+    </languages>
+
+    <positions>
+        <position>header</position>
+        <position>nav</position>
+        <position>search</position>
+        <position>top</position>
+        <position>breadcrumbs</position>
+        <position>main-top</position>
+        <position>sidebar-a</position>
+        <position>sidebar-b</position>
+        <position>content-top</position>
+        <position>content-bottom</position>
+        <position>main-bottom</position>
+        <position>bottom</position>
+        <position>contact</position>
+        <position>footer</position>
+        <position>copyright</position>
+    </positions>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+                <field name="pagelayout"
+                    type="list"
+                    default="1column"
+                    label="TPL_THISTEMPLATE_FIELD_PAGELAYOUT_LABEL"
+                    description="TPL_THISTEMPLATE_FIELD_PAGELAYOUT_DESC"
+                >
+                    <option value="1column">        TPL_THISTEMPLATE_FIELD_PAGELAYOUT_OPTION_1COLUMN</option>
+                    <option value="2column-left">   TPL_THISTEMPLATE_FIELD_PAGELAYOUT_OPTION_2COLUMN-LEFT</option>
+                    <option value="2column-right">  TPL_THISTEMPLATE_FIELD_PAGELAYOUT_OPTION_2COLUMN-RIGHT</option>
+                    <option value="3column">        TPL_THISTEMPLATE_FIELD_PAGELAYOUT_OPTION_3COLUMN</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field
+                    name="analytics"
+                    type="list"
+                    default="0"
+                    label="TPL_THISTEMPLATE_FIELD_ANALYTICS_LABEL"
+                    description="TPL_THISTEMPLATE_FIELD_ANALYTICS_DESC">
+                        <option value="0">
+                            TPL_THISTEMPLATE_FIELD_ANALYTICS_OPTION_NO
+                        </option>
+                        <option value="1">
+                            TPL_THISTEMPLATE_FIELD_ANALYTICS_OPTION_GA
+                        </option>
+                        <option value="2">
+                            TPL_THISTEMPLATE_FIELD_ANALYTICS_OPTION_UGA
+                        </option>
+                        <option value="3">
+                            TPL_THISTEMPLATE_FIELD_ANALYTICS_OPTION_GTM
+                        </option>
+                </field>
+                <field
+                    name="analyticsid"
+                    type="text"
+                    default=""
+                    label="TPL_THISTEMPLATE_FIELD_ANALYTICSID_LABEL"
+                    description="TPL_THISTEMPLATE_FIELD_ANALYTICSID_DESC"
+                    filter="string"
+                />
+            </fieldset>
+
+            <fieldset name="js" label="TPL_THISTEMPLATE_FIELDSET_JS_LABEL">
+                <field name="svginjection"
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    label="TPL_THISTEMPLATE_FIELD_SVGINJECTION_LABEL"
+                    description="TPL_THISTEMPLATE_FIELD_SVGINJECTION_DESC"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>
