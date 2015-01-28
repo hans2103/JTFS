@@ -11,3 +11,11 @@ The result is a solid Joomla! template which can be expanded any way you like. B
 * https://www.byte.nl
 
 In this repository you will find the code needed for each of the steps in the workshop.
+
+# Step 01
+Creation of two empty files (index.php and templateDetails.xml)
+View code changes:
+https://github.com/hans2103/JTFS/commit/29dcbefb2fe72fdb2cd2ae15dd3bc1c470f9f215
+
+# Step 02
+View code changes:
