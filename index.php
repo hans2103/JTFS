@@ -15,13 +15,41 @@ include_once JPATH_THEMES.'/'.$this->template.'/helper.php';
 		</header>
 
 		<main>
-			<jdoc:include type="message" />
-			<jdoc:include type="component" />
-			<jdoc:include type="modules" name="sidebar-a" style="no" />
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+						<?php if(count(JFactory::getApplication()->getMessageQueue())):?>
+							<jdoc:include type="message" />
+						<?php endif; ?>
+						<jdoc:include type="component" />
+					</div>
+					<div class="col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
+						<jdoc:include type="modules" name="sidebar-a" style="none" />
+					</div>
+				</div>
+			</div>
 		</main>
 
 		<footer>
-			<jdoc:include type="modules" name="footer" style="no" />
+			<?php if ($this->countModules('footer')): ?>
+			<section class="footer-nav">
+				<div class="container">
+					<div class="row">
+						<jdoc:include type="modules" name="footer" style="no" />
+					</div>
+				</div>
+			</section>
+			<?php endif; ?>
+
+			<?php if ($this->countModules('copyright')): ?>
+			<section class="footer-copyright">
+				<div class="container">
+					<div class="row">
+						<jdoc:include type="modules" name="copyright" style="no" />
+					</div>
+				</div>
+			</section>
+			<?php endif; ?>
 		</footer>
 	</body>
 </html>
