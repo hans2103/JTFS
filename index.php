@@ -7,6 +7,18 @@
 		<jdoc:include type="head" />
 	</head>
 	<body>
-		Hello World!
+		<header>
+			<jdoc:include type="modules" name="nav" style="no" />
+		</header>
+
+		<main>
+			<jdoc:include type="message" />
+			<jdoc:include type="component" />
+			<jdoc:include type="modules" name="sidebar-a" style="no" />
+		</main>
+
+		<footer>
+			<jdoc:include type="modules" name="footer" style="no" />
+		</footer>
 	</body>
 </html>
