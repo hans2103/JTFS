@@ -15,19 +15,42 @@ include_once JPATH_THEMES.'/'.$this->template.'/helper.php';
 		</header>
 
 		<main>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
-						<?php if(count(JFactory::getApplication()->getMessageQueue())):?>
-							<jdoc:include type="message" />
-						<?php endif; ?>
-						<jdoc:include type="component" />
-					</div>
-					<div class="col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
-						<jdoc:include type="modules" name="sidebar-a" style="none" />
-					</div>
-				</div>
-			</div>
+			<?php if ($this->countModules('content-top')): ?>
+			<aside>
+				<jdoc:include type="modules" name="content-top" style="no" />
+			</aside>
+			<?php endif; ?>
+
+			<?php
+				switch($pagelayout)
+				{
+					case 'homepage':
+						include_once JPATH_THEMES.'/'.$this->template.'/pagelayout/homepage.php';
+						break;
+
+					case '1column':
+						include_once JPATH_THEMES.'/'.$this->template.'/pagelayout/1column.php';
+						break;
+
+					case '2column-left':
+						include_once JPATH_THEMES.'/'.$this->template.'/pagelayout/2column-left.php';
+						break;
+
+					case '2column-right':
+						include_once JPATH_THEMES.'/'.$this->template.'/pagelayout/2column-right.php';
+						break;
+
+					case '3column':
+						include_once JPATH_THEMES.'/'.$this->template.'/pagelayout/3column.php';
+						break;
+
+					default:
+						include_once JPATH_THEMES.'/'.$this->template.'/pagelayout/1column.php';
+				}
+			?>
+			<?php if ($this->countModules('content-bottom')): ?>
+			<jdoc:include type="modules" name="content-bottom" style="no" />
+			<?php endif; ?>
 		</main>
 
 		<footer>

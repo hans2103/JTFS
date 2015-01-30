@@ -55,7 +55,6 @@ $pageclass			= $menu->params->get('pageclass_sfx');
 // Check upon the current page layout
 	$pagelayout = $this->params->get('pagelayout', '1column');
 
-	// Determine whether to show sidebar-A (@todo: Jisse, clean up this mess)
 		$SidebarA = false;
 		$SidebarB = false;
 
@@ -89,3 +88,13 @@ $pageclass			= $menu->params->get('pageclass_sfx');
 		{
 			$pagelayout = '3column';
 		}
+
+		if($helper->isHome())
+		{
+			$pagelayout = 'homepage';
+		}
+
+
+
+
+
