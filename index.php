@@ -1,5 +1,8 @@
 <?php
-	defined( '_JEXEC' ) or die( 'Restricted access' );
+defined('_JEXEC') or die;
+
+// Load This Template Helper
+include_once JPATH_THEMES.'/'.$this->template.'/helper.php';
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" >
