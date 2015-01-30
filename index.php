@@ -21,7 +21,25 @@ include_once JPATH_THEMES.'/'.$this->template.'/helper.php';
 		</main>
 
 		<footer>
-			<jdoc:include type="modules" name="footer" style="no" />
+			<?php if ($this->countModules('footer')): ?>
+			<section class="footer-nav">
+				<div class="container">
+					<div class="row">
+						<jdoc:include type="modules" name="footer" style="no" />
+					</div>
+				</div>
+			</section>
+			<?php endif; ?>
+
+			<?php if ($this->countModules('copyright')): ?>
+			<section class="footer-copyright">
+				<div class="container">
+					<div class="row">
+						<jdoc:include type="modules" name="copyright" style="no" />
+					</div>
+				</div>
+			</section>
+			<?php endif; ?>
 		</footer>
 	</body>
 </html>
