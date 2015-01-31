@@ -16,6 +16,7 @@ $config				= JFactory::getConfig();
 
 $input				= $app->input;
 $menu				= $app->getMenu()->getActive();
+$site_url			= JURI::root();
 
 // Detecting Active Variables
 $option				= $input->get('option', '');

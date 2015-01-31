@@ -10,8 +10,23 @@ include_once JPATH_THEMES.'/'.$this->template.'/helper.php';
 		<jdoc:include type="head" />
 	</head>
 	<body>
-		<header>
-			<jdoc:include type="modules" name="nav" style="no" />
+		<header class="navbar navbar-default header-wrapper" id="header">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".mh-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a href="<?php echo $site_url; ?>" class="navbar-brand logo"><img src="/images/logo.svg" alt="<?php echo $sitename; ?>" class="inject-me" /></a>
+				</div>
+				<nav class="collapse navbar-collapse mh-navbar-collapse navbar-inner" role="navigation">
+					<?php if ($this->countModules('nav')): ?>
+					<jdoc:include type="modules" name="nav" style="none" />
+					<?php endif; ?>
+				</nav>
+			</div>
 		</header>
 
 		<main>
