@@ -94,4 +94,5 @@ https://github.com/phproberto/plg_sys_mootable
 
 Is you have improvements or suggestions for ThisTemplate, please use the Github Issue tracker:
 https://github.com/hans2103/JTFS/issues
+
 [![Analytics](https://ga-beacon.appspot.com/UA-2000642-17/JTFS/readme)](https://github.com/igrigorik/ga-beacon)
